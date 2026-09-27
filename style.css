@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. VARIÁVEIS GLOBAIS (DESIGN TOKENS)
-   ========================================================================== */
+
 :root {
   /* Cores Principais */
   --primary: #12372a;
@@ -17,19 +15,19 @@
   --text-main: #1f2937;
   --text-muted: #4b5563;
   
-  /* Bordas e Sombras */
+
   --border: #e5e7eb;
   --border-green: #bbf7d0;
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04);
   --shadow-md: 0 6px 16px rgba(18, 55, 42, 0.08);
   --shadow-lg: 0 16px 32px rgba(18, 55, 42, 0.14);
   
-  /* Arredondamento */
+
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 18px;
   
-  /* Tipografia */
+
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-display: 'Montserrat', system-ui, sans-serif;
 }
