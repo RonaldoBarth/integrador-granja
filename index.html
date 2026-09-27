@@ -1,213 +1,189 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ErgoSuinos</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/porco.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saúde Ocupacional</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css" />
+
+  <script type="module" src="script.js"></script>
 </head>
+
 <body>
-    <header class="cabecalho"><!--9 botoes-->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="brand">
+        <span class="brand-title">BEM ESTAR<strong> OCUPACIONAL</strong></span>
+      </a>
+      <nav class="nav-menu">
+        <a href="#sobre">Fundamentos</a>
+        <a href="#modelo-hotspot">Manejo Interativo</a>
+        <a href="#galeria">Rotina Diária</a>
+        <a href="#postura">Postura</a>
+        <a href="#exercicios">Exercícios</a>
+        <a href="#pausa-ativa">Pausa Ativa</a>
+        <a href="#seguranca">EPIs & Cargas</a>
+      </nav>
+      <a href="#pausa-ativa" class="btn btn-sm btn-primary">Iniciar Pausa</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="tag-pill">Ergonomia & Bem-Estar na Suinocultura</div>
+        <h1>Ergonomia no Trabalho</h1>
+        <p class="hero-quote">
+          “Onde o cuidado encontra a inovação, o movimento se transforma em saúde.”
+        </p>
+        <p class="hero-description">
+          Este site foi desenvolvido para promover mais saúde, segurança e qualidade de vida no ambiente de trabalho, por meio de orientações simples e acessíveis. A plataforma reúne informações sobre postura, prevenção de dores, exercícios, alongamentos, pausas ativas e movimentação de cargas, ajudando os trabalhadores a cuidar melhor do corpo.
+        </p>
+        <div class="hero-actions">
+          <a href="#exercicios" class="btn btn-primary">Painel de Exercícios</a>
+          <a href="#galeria" class="btn btn-outline-light">Rotina na Suinocultura</a>
+        </div>
+      </div>
+      
+      <div class="hero-visual-card">
+        <div class="image-wrapper">
+          <img src="img/porco.jpg" alt="Suíno na instalação" class="hero-img" />
+          <div class="image-overlay">
+            <span class="overlay-badge">Maternidade Suína</span>
+            <p>Cuidado postural contínuo no manejo e observação diária.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="section section-alt">
+    <div class="container">
+      <div class="feature-panel">
+        <div class="feature-text">
+          <span class="section-tag-light">Fundamentação Técnica</span>
+          <h2>O que é Ergonomia?</h2>
+          <p>A ergonomia busca tornar o trabalho mais seguro, confortável e adequado às necessidades do trabalhador.</p>
+          <p>Por meio de cuidados com a postura, movimentos, organização das atividades, pausas e uso correto dos equipamentos, é possível reduzir sobrecargas, prevenir dores e contribuir para mais saúde e qualidade de vida durante a jornada de trabalho.</p>
+          <div class="highlight-quote">
+            <strong>Cuidar do movimento hoje é transformar a saúde de amanhã.</strong>
+          </div>
+        </div>
+        <div class="feature-cards">
+          <div class="info-card">
+            <h4>Conforto nas Instalações</h4>
+            <p>Adequação física aos processos de parto, medicação de leitões e desmame.</p>
+          </div>
+          <div class="info-card">
+            <h4>Prevenção Ativa</h4>
+            <p>Redução drástica de sobrecargas e dores na coluna lombar e joelhos.</p>
+          </div>
+          <div class="info-card">
+            <h4>Qualidade de Vida</h4>
+            <p>Manutenção da integridade física com aumento de produtividade e bem-estar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="modelo-hotspot" class="section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Engenharia Biomecânica</span>
+        <h2>Manejo & Análise Postural</h2>
+        <p>Clique nos pinos interativos sobre a imagem ou nos botões laterais para visualizar as orientações ergonômicas da rotina com os animais.</p>
+      </div>
+
+      <div class="model-3d-layout">
         
-        <div>
-                <p>Programa de Ergonomia e Biosseguridade Ocupacional • Suinocultura</p>
-                <p>Unidade: Maternidade & Manejo Reprodutivo</p>
+        <div class="hotspot-container">
+          <img src="img/porco2.jpg" alt="Matriz Suína 4K" class="hotspot-img" />
+          
+          <!-- Pinos Clicáveis em cima da foto -->
+          <button class="hotspot-pin active" data-point="0" style="top: 75%; left: 30%;" title="Acesso ao Escamoteador">
+            <i data-lucide="plus"></i>
+          </button>
+          <button class="hotspot-pin" data-point="1" style="top: 50%; left: 65%;" title="Arraçoamento">
+            <i data-lucide="plus"></i>
+          </button>
+          <button class="hotspot-pin" data-point="2" style="top: 85%; left: 75%;" title="Limpeza de Baias">
+            <i data-lucide="plus"></i>
+          </button>
+          
+          <div class="canvas-controls-hint">
+            <i data-lucide="mouse-pointer-click"></i>
+            <span>Toque nos pinos pulsantes na foto</span>
+          </div>
         </div>
 
-        <div>
-            <button class="btn_logo"><span class="logo_agro">AGRO</span><span class="logo_ergo">ERGO</span><span class="logo_suinos">SUINOS</span></button><!-- Logo, botao para atualizar a pagina "nao necessario" -->
-            <a href="#fundamentos" class="btn_fundamentos">Fundamentos</a><!-- fundamentos -->
-            <a href="#manejo" class="btn_manejo">Manejo interativo</a><!-- manejo interativo -->
-            <a href="#rotina" class="btn_rotina">Rotina diaria</a><!-- rotina diaria -->
-            <a href="#postura" class="btn_postura">Postura</a><!-- postura -->
-            <a href="#exercicios" class="btn_exercicios">Exercicios</a><!-- exercicios -->
-            <a href="#pausas_ativas" class="btn_pausa">Pausas ativas</a><!-- pausa ativa -->
-            <a href="#epi_carga" class="btn_cargas">EPIs & Cargas</a><!-- epis & cargas -->
-            <button>Iniciar a pausa</button><!-- iniciar a pausa -->
+        <div class="model-info-panel">
+          <div class="panel-tag">Análise do Ponto Crítico</div>
+          <h3 id="hotspot-title">1. Acesso ao Escamoteador</h3>
+          <p id="hotspot-desc">A contenção e medicação de leitões exigem flexão da coluna lombar. Mantenha o corpo próximo à baia, flexione os joelhos e evite torções.</p>
+          <div class="panel-alert">
+            <i data-lucide="alert-triangle"></i>
+            <span id="hotspot-tip">Orientação: Apoie um dos membros inferiores para distribuir o peso e alterne o lado.</span>
+          </div>
+          <div class="hotspot-btn-list">
+            <button class="btn-hotspot active" data-point="0">1. Escamoteador & Leitões</button>
+            <button class="btn-hotspot" data-point="1">2. Arraçoamento da Matriz</button>
+            <button class="btn-hotspot" data-point="2">3. Limpeza & Baias de Parto</button>
+          </div>
         </div>
-    </header>
+      </div>
+    </div>
+  </section>
 
-    <main>
-        <section id="fundamentos"> <!-- Fundamentos sobre a pagina e a baixo sobre ergonomia -->
+  <section id="galeria" class="section section-nature">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Rotina Operacional</span>
+        <h2>Manejo Real na Suinocultura</h2>
+        <p>A preservação da saúde postural do trabalhador em cada etapa da produção.</p>
+      </div>
 
-            <div>
-                <span><p>Ergonomia & Bem-Estar na Suinocultura</p></span>
-                <h1>Ergonomia do trabalho</h1>
-                <p>Ergonomia & Bem-Estar na Suinocultura</p>
-                <p> Este projeto foi desenvolvido para promover mais saúde, segurança e qualidade de
-                    vida no ambiente de trabalho, por meio de orientações simples e acessíveis. A
-                    plataforma reúne informações sobre postura, prevenção de dores, exercícios,
-                    alongamentos, pausas ativas e movimentação de cargas, ajudando os
-                    trabalhadores a cuidar melhor do corpo.</p>
-                <img src="img/porco_inicio.png" ref="Imagens de 3 porcos jovens">
-                <span><a href="#exercicios">Painel de exercicios</a></span>
-                <span><a href="#rotina">Rotina da suinocultura</a></span>
-            </div>
+      <div class="grid-3">
+        <article class="photo-card">
+          <div class="photo-img-wrap">
+            <img src="img/leitao.jpg" alt="Leitões descansando" />
+          </div>
+          <div class="photo-content">
+            <h4>Manejo no Escamoteador</h4>
+            <p>Içamento seguro no processamento e vacinação, aproximando os animais do corpo para proteger a coluna lombar.</p>
+          </div>
+        </article>
 
-            <div>
-                <div>
-                    <h2>Fundamentação técnica</h2>
-                    <h3>Oque é ergonomia</h3>
-                    <p>A ergonomia busca tornar o trabalho mais seguro, confortável e adequado às
-                        necessidades do trabalhador.</p>
-                    <p>Por meio de cuidados com a postura, movimentos, organização das
-                        atividades, pausas e uso correto dos equipamentos, é possível reduzir
-                        sobrecargas, prevenir dores e contribuir para mais saúde e qualidade de vida
-                        durante a jornada de trabalho.</p>
-                        <span><p>Cuidar do movimento hoje é transformar a saúde de amanhã.</p></span>
-                </div>
-                
-                <div>
-                    <span>
-                        <h4>Conforto nas instalações</h4>
-                        <p>Adequação física aos processos de parto, medicação de leitões e
-                            desmame.</p>
-                    </span>
-                    <span>
-                        <h4>Prevenção Ativa</h4>
-                        <p>Redução drástica de sobrecargas e dores na coluna lombar e
-                            joelhos.</p>
-                    </span>
-                    <span>
-                        <h4>Qualidade de vida</h4>
-                        <p>Manutenção da integridade física com aumento de produtividade e
-                            bem-estar.</p>
-                    </span>
-                </div>
-            </div>
-        </section>
+        <!-- Foto 2: filhotes.jpg -->
+        <article class="photo-card">
+          <div class="photo-img-wrap">
+            <img src="img/filhotes.jpg" alt="Matriz amamentando filhotes" />
+          </div>
+          <div class="photo-content">
+            <h4>Acompanhamento de Partos</h4>
+            <p>Mantenha os joelhos flexionados e utilize apoio adequado ao inspecionar as matrizes e leitões lactantes.</p>
+          </div>
+        </article>
 
-        <section id="manejo"> <!-- manejo, 3 botoes no conta inferior direito, cada botao deve alterar o texto em cima deles para o assunto referente ao botao-->
-            <div>
-                <img src="img/porco_manejo.png" ref="Alguns porcos jovens pastando no fundo e um porco centralizado olhando para camera">
-                <div>
-                    <div><!-- Acesso ao Escamoteador -->
-                        <p>Análise do Ponto Crítico</p>
-                        <h2>1. Acesso ao Escamoteador</h2>
-                        <p>A contenção e medicação de leitões exigem
-                            flexão da coluna lombar. Mantenha o corpo
-                            próximo à baia, flexione os joelhos e evite
-                            torções.</p>
-                        <span><p>Orientação: Apoie um dos membros
-                                inferiores para distribuir o peso e alterne o
-                                lado</p>
-                        </span>
-                    </div>
-
-                    <div><!-- 2. Arraçoamento da Matriz -->
-                        
-                    </div>
-
-                    <div><!-- 3. Limpeza & Baias de Parto -->
-                        
-                    </div>
-
-                    <div><!-- Botoes -->
-                        <button>1. Acesso ao Escamoteador</button>
-                        <button>2. Arraçoamento da Matriz</button>
-                        <button>3. Limpeza & Baias de Parto</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="rotina">
-            <div>
-                <h2>Rotina operacional</h2>
-                <h4>Manejo real na suino cultura</h4>
-                <p>A preservação da saúde postural do trabalhador em cada etapa da produção</p>
-
-                <div>
-                    <span>
-                        <img src="img/porco_dormindo.png" ref="Alguns leitões dormindo">
-                        <h4>Manejo no Escamoteador</h4>
-                        <p>Içamento seguro no processamento e vacinação,
-                            aproximando os animais do corpo para proteger a
-                            coluna lombar</p>
-                    </span>
-                    <span>
-                        <img src="img/porco_amamentado.png" ref="alguns leitões amamentando">
-                        <h4>Acompanhamento de Partos</h4>
-                        <p>Mantenha os joelhos flexionados e utilize apoio
-                            adequado ao inspecionar as matrizes e leitões
-                            lactantes.</p>
-                    </span>
-                    <span>
-                        <img src="img/compo_aberto.png" ref="Imagem de uma pastagem ao por do sol">
-                        <h4>Ambiente e Campo</h4>
-                        <p>Postura ereta e passos firmes durante o
-                            monitoramento da granja e instalações a céu
-                            aberto.</p>
-                    </span>
-                </div>
-            </div>
-        </section>
-
-        <section id="postura">
-            <div>
-                <h2>DIRETRIZES PRÁTICAS</h2>
-                <h3>Postura no trabalho</h3>
-                <p>Uma postura adequada ajuda a reduzir a sobrecarga sobre a coluna, músculos e
-                    articulações</p>
-                <div>
-                    <div>
-                        <h4>Ao Trabalhar em pé</h4>
-                        <ul>
-                            <li>Mantenha os pés apoiados e estáveis.</li>
-                            <li>Distribua o peso do corpo entre as duas pernas</li>
-                            <li>Evite permanecer parado na mesma posição por muito tempo.</li>
-                            <li>Alterne as atividades sempre que possível.</li>
-                        </ul>
-                    </div>
-                        
-                    <div>
-                        <h4>Ao Trabalhar inclinado</h4>
-                        <ul>
-                            <li>Evite permanecer com o tronco curvado por longos períodos.</li>
-                            <li>Aproxime o corpo do local de trabalho.</li>
-                            <li>Evite movimentos repetidos de flexão e rotação da coluna.</li>
-                            <li>Quando possível, ajuste a altura ou utilize apoio.</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4>Ao pegar objetos</h4>
-                        <ul>
-                            <li>Aproxime-se da carga.</li>
-                            <li>Flexione os joelhos e mantenha os pés firmes.</li>
-                            <li>Mantenha a carga próxima ao corpo.</li>
-                            <li>Evite girar o tronco enquanto segura peso.</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="exercicios">
-            <div>
-                
-            </div>
-        </section>
-
-        <section id="pausas_ativas">
-            <div>
-                
-            </div>
-        </section>
-
-        <section id="epi_cargas">
-            <div>
-                
-            </div>
-        </section>
-    </main>
-
-    <footer>
-
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+        <!-- Foto 3: paisagem_2.jpg como card -->
+        <article class="photo-card">
+          <div class="photo-img-wrap">
+            <img src="img/paisagem.jpg" alt="Nascer do sol no campo" />
+          </div>
+          <div class="photo-content">
+            <h4>Ambiente e Campo</h4>
+            <p>Postura ereta e passos firmes durante o monitoramento da granja e instalações a céu aberto.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  </body> 
 </html>
