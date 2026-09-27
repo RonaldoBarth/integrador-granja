@@ -49,9 +49,9 @@ export const exercisesDB = {
 
 export const hotspotData = [
   {
-    title: '1. Acesso ao Escamoteador',
-    desc: 'A contenção e medicação de leitões exigem flexão da coluna lombar. Mantenha o corpo próximo à baia, flexione os joelhos e evite torções.',
-    tip: 'Orientação: Apoie um dos membros inferiores para distribuir o peso e alterne o lado.'
+    title: '1. Postura ao Pegar Cargas e Animais',
+    desc: 'Durante o manejo, aproxime-se da carga ou do animal. Flexione os joelhos, mantenha os pés firmes e levante de forma controlada, utilizando principalmente a força das pernas.',
+    tip: 'Orientação: Mantenha a carga próxima ao corpo e evite girar o tronco enquanto segura peso.'
   },
   {
     title: '2. Arraçoamento da Matriz',
