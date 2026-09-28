@@ -222,3 +222,30 @@ body {
   .dash-btn { white-space: nowrap; border-bottom: none; border-left: none; }
   .dash-btn.active { border-bottom: 4px solid var(--primary); border-left: none; }
 }
+
+ /* MELHORIA: Dá um destaque visual muito maior para os Pontos de Atenção Médica/Ergonômica */
+.dash-meta-care {
+  background-color: #fef2f2; /* Fundo avermelhado bem sutil */
+  border-left: 4px solid #ef4444; /* Borda vermelha de alerta */
+  padding: 0.75rem;
+  border-radius: 4px;
+}
+
+.dash-meta-care strong {
+  color: #b91c1c !important;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* MELHORIA: Evita que os blocos de texto fiquem colados em telas menores */
+.dash-meta-grid > div {
+  flex: 1 1 200px;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+/* MELHORIA: Transição suave ao clicar nos botões de hotspot */
+.btn-hotspot {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}

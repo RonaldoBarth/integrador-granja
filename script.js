@@ -1,91 +1,96 @@
-      import { exercisesDB } from "./dados";
-
       function initDashboard() {
-        const contentArea = document.getElementById('dash-content');
-        const buttons = document.querySelectorAll('.dash-btn');
+       const contentArea = document.getElementById('dash-content');
+       const buttons = document.querySelectorAll('.dash-btn');
 
-        function renderExercises(cat) {
-          if (!contentArea) return;
-          contentArea.innerHTML = '';
-          const items = exercisesDB[cat] || [];
+      function renderExercises(cat) {
+       if (!contentArea) return;
+       contentArea.innerHTML = '';
+       const items = exercisesDB[cat] || [];
 
-          items.forEach(ex => {
-            const itemDiv = document.createElement('div');
-            itemDiv.className = 'dash-exercise-item';
-            itemDiv.innerHTML = `
-              <h3>${ex.name}</h3>
-              <p><strong>Execução:</strong> ${ex.how}</p>
-              <div class="dash-meta-grid">
-                <div><strong>Dose Sugerida</strong>${ex.dose}</div>
-                <div><strong>Objetivo Principal</strong>${ex.goal}</div>
-                <div class="dash-meta-care"><strong>⚠ Ponto de Atenção</strong>${ex.care}</div>
-              </div>
-            `;
-            contentArea.appendChild(itemDiv);
-          });
-        }
+       items.forEach(ex => {
+       const itemDiv = document.createElement('div');
+       itemDiv.className = 'dash-exercise-item';
+       itemDiv.innerHTML = `
+        <h3>${ex.name}</h3>
+        <p><strong>Execução:</strong> ${ex.how}</p>
+        <div class="dash-meta-grid">
+          <div><strong>Dose Sugerida</strong>${ex.dose}</div>
+          <div><strong>Objetivo Principal</strong>${ex.goal}</div>
+          <div class="dash-meta-care"><strong>⚠ Ponto de Atenção</strong>${ex.care}</div>
+        </div>
+      `;
+      contentArea.appendChild(itemDiv);
+    });
 
-        buttons.forEach(btn => {
-          btn.addEventListener('click', () => {
-            buttons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            renderExercises(btn.getAttribute('data-filter'));
-          });
-        });
+    // MELHORIA: Faz o painel rolar de volta para o topo ao trocar de categoria
+    contentArea.scrollTop = 0;
+  }
 
-        renderExercises('costas'); 
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderExercises(btn.getAttribute('data-filter'));
+    });
+  });
+
+  renderExercises('costas'); 
+}
+
+
+function initTimer() {
+  let timeLeft = 180;
+  let timerInterval = null;
+
+  const countEl = document.getElementById('timer-text');
+  const btnToggle = document.getElementById('btn-timer-start');
+  const btnReset = document.getElementById('btn-timer-reset');
+
+  function update() {
+    const mins = Math.floor(timeLeft / 60);
+    const secs = timeLeft % 60;
+    if (countEl) countEl.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+  }
+
+  if (btnToggle) {
+    btnToggle.addEventListener('click', () => {
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+        btnToggle.textContent = 'Continuar';
+        return;
       }
-
-      function initTimer() {
-        let timeLeft = 180;
-        let timerInterval = null;
-
-        const countEl = document.getElementById('timer-text');
-        const btnToggle = document.getElementById('btn-timer-start');
-        const btnReset = document.getElementById('btn-timer-reset');
-        const checkboxes = document.querySelectorAll('.routine-checklist input[type="checkbox"]');
-
-        function update() {
-          const mins = Math.floor(timeLeft / 60);
-          const secs = timeLeft % 60;
-          if (countEl) countEl.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+      btnToggle.textContent = 'Pausar';
+      timerInterval = setInterval(() => {
+        if (timeLeft > 0) {
+          timeLeft--;
+          update();
+        } else {
+          clearInterval(timerInterval);
+          timerInterval = null;
+          btnToggle.textContent = 'Concluído';
+          alert('Pausa ativa concluída com sucesso!');
         }
+      }, 1000);
+    });
+  }
 
-        if (btnToggle) {
-          btnToggle.addEventListener('click', () => {
-            if (timerInterval) {
-              clearInterval(timerInterval);
-              timerInterval = null;
-              btnToggle.textContent = 'Continuar';
-              return;
-            }
-            btnToggle.textContent = 'Pausar';
-            timerInterval = setInterval(() => {
-              if (timeLeft > 0) {
-                timeLeft--;
-                update();
-              } else {
-                clearInterval(timerInterval);
-                timerInterval = null;
-                btnToggle.textContent = 'Concluído';
-                alert('Pausa ativa concluída com sucesso!');
-              }
-            }, 1000);
-          });
-        }
+  if (btnReset) {
+    btnReset.addEventListener('click', () => {
+      if (timerInterval) clearInterval(timerInterval);
+      timerInterval = null;
+      timeLeft = 180;
+      update();
+      if (btnToggle) btnToggle.textContent = 'Iniciar';
+      
+      // MELHORIA: Busca os elementos atualizados na árvore na hora de resetar
+      const currentCheckboxes = document.querySelectorAll('.routine-checklist input[type="checkbox"]');
+      currentCheckboxes.forEach(c => c.checked = false);
+    });
+  }
+  update();
+}
 
-        if (btnReset) {
-          btnReset.addEventListener('click', () => {
-            if (timerInterval) clearInterval(timerInterval);
-            timerInterval = null;
-            timeLeft = 180;
-            update();
-            if (btnToggle) btnToggle.textContent = 'Iniciar';
-            checkboxes.forEach(c => c.checked = false);
-          });
-        }
-        update();
-      }
 
       function initHotspots() {
         const titleEl = document.getElementById('hotspot-title');
