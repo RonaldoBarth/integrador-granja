@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Saúde Ocupacional</title>
+  <title>Bem Estar Ocupacional</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -274,12 +274,79 @@
             <button class="btn btn-sm btn-secondary" id="btn-timer-reset">Resetar</button>
           </div>
         </div>
-
-        <div class="pause-exercises" id="pause-exercises">
-          <!-- Exercícios serão carregados aqui via JavaScript -->
+ 
+         <div class="routine-flow">
+            <h4>Checklist da Rotina (3 a 5 min)</h4>
+            <div class="routine-checklist">
+              <label class="check-row"><input type="checkbox" /><span><strong>Pescoço:</strong> 5 movimentos suaves para cada lado.</span></label>
+              <label class="check-row"><input type="checkbox" /><span><strong>Ombros:</strong> 10 elevações e relaxamentos.</span></label>
+              <label class="check-row"><input type="checkbox" /><span><strong>Punhos & Mãos:</strong> 10 movimentos circulares nos punhos + abrir e fechar as mãos 15 vezes.</span></label>
+              <label class="check-row"><input type="checkbox" /><span><strong>Pernas & Panturrilha:</strong> 10 elevações alternadas dos joelhos + alongar por 20 segundos de cada lado.</span></label>
+              <label class="check-row"><input type="checkbox" /><span><strong>Respiração:</strong> Realizar 3 respirações lentas e profundas.</span></label>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-  </body> 
+  <section id="seguranca" class="section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Segurança Operacional</span>
+        <h2>Proteção & Movimentação de Cargas</h2>
+        <p>Ações essenciais de proteção na infraestrutura da suinocultura e transporte de materiais.</p>
+      </div>
+      
+      <div class="grid-2">
+        <article class="protocol-card">
+          <div class="card-icon-box"><i data-lucide="hard-hat"></i></div>
+          <h3>Uso de EPI</h3>
+          <p class="protocol-lead">Os Equipamentos de Proteção Individual ajudam a proteger o trabalhador. O equipamento deve ser adequado ao risco e utilizado corretamente.</p>
+          <ul class="checklist">
+            <li>Utilize o EPI indicado para cada atividade.</li>
+            <li>Verifique se o equipamento está em boas condições antes do uso.</li>
+            <li>Utilize o equipamento de forma correta.</li>
+            <li>Não utilize equipamentos danificados.</li>
+            <li>Informe o responsável quando houver necessidade de substituição.</li>
+          </ul>
+        </article>
+
+        <article class="protocol-card">
+          <div class="card-icon-box"><i data-lucide="truck"></i></div>
+          <h3>Movimentação de Cargas</h3>
+          <p class="protocol-lead">“Não é apenas o peso da carga: a forma como você movimenta também importa.”</p>
+          <div class="phases-flow">
+            <div class="phase-step">
+              <strong>1. Antes de pegar uma carga</strong>
+              <p>Verifique peso e tamanho. Planeje o caminho. Aproxime-se e utilize auxílio mecânico quando necessário.</p>
+            </div>
+            <div class="phase-step">
+              <strong>2. Durante o levantamento</strong>
+              <p>Mantenha pés firmes. Flexione os joelhos. Carga próxima ao corpo. Levante utilizando as pernas. Evite girar o tronco.</p>
+            </div>
+            <div class="phase-step">
+              <strong>3. Durante o transporte</strong>
+              <p>Evite transportar objetos que impeçam sua visão. Não carregue peso acima da sua capacidade. Utilize carrinhos.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-disclaimer">
+        <h4>Aviso Importante</h4>
+        <p>Cada corpo responde de uma maneira. Os exercícios apresentados têm caráter educativo e preventivo e devem ser realizados respeitando os limites individuais. Em caso de dor persistente ou intensa, procure avaliação de um profissional de saúde.</p>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 AgroErgo Suínos — Ergonomia e Biomecânica Aplicada</span>
+        <span>Cuidar do movimento hoje é transformar a saúde de amanhã.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
 </html>
