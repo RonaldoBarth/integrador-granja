@@ -57,9 +57,6 @@ body {
   margin: 0 auto;
 }
 
-/* =========================================
-   NAVEGAÇÃO (HEADER)
-   ========================================= */
 .topbar {
   background-color: var(--primary);
   width: 100%;
@@ -123,9 +120,6 @@ body {
   color: var(--primary-light);
 }
 
-/* =========================================
-   BOTÕES E TAGS
-   ========================================= */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -208,9 +202,6 @@ body {
 .section-tag { color: var(--accent); }
 .section-tag-light { color: var(--mint); }
 
-/* =========================================
-   ESTRUTURAS GERAIS E GRIDS
-   ========================================= */
 .section { padding: 4.5rem 0; }
 .section-alt { background-color: #ffffff; border-top: 1px solid var(--border-green); border-bottom: 1px solid var(--border-green); }
 .section-nature { background-color: rgba(255, 255, 255, 0.6); backdrop-filter: blur(5px); border-top: 1px solid var(--border-green); border-bottom: 1px solid var(--border-green); }
@@ -243,9 +234,6 @@ body {
   gap: 2rem;
 }
 
-/* =========================================
-   HERO SECTION
-   ========================================= */
 .hero {
   padding: 8rem 0;
   background-color: var(--primary);
@@ -314,9 +302,6 @@ body {
   padding: 0.2rem 0.55rem; border-radius: 4px; margin-bottom: 0.4rem;
 }
 
-/* =========================================
-   FUNDAMENTOS (FEATURE PANEL)
-   ========================================= */
 .feature-panel {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -341,9 +326,6 @@ body {
 .info-card h4 { color: var(--mint); font-size: 1.05rem; margin-bottom: 0.25rem; }
 .info-card p { font-size: 0.85rem; opacity: 0.85; }
 
-/* =========================================
-   MODELO HOTSPOT (MANEJO INTERATIVO)
-   ========================================= */
 .model-3d-layout {
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
@@ -409,9 +391,6 @@ body {
 }
 .btn-hotspot:hover, .btn-hotspot.active { background: var(--primary-light); color: #fff; border-color: var(--primary-light); }
 
-/* =========================================
-   GALERIA & CARDS DE INFORMAÇÃO
-   ========================================= */
 .photo-card {
   background: #fff; border: 1px solid var(--border-green);
   border-radius: var(--radius-md); overflow: hidden;
@@ -428,7 +407,6 @@ body {
 .photo-content h4 { font-family: var(--font-display); font-size: 1.15rem; color: var(--primary); margin-bottom: 0.35rem; }
 .photo-content p { font-size: 0.88rem; color: var(--text-muted); }
 
-/* Cards de Postura e Protocolos (EPIs/Cargas) */
 .postura-card, .posture-card, .protocol-card {
   background: #fff;
   border: 1px solid var(--border-green);
@@ -464,7 +442,6 @@ body {
 
 .card-icon-box i { width: 24px; height: 24px; }
 
-/* Listas de Checklist */
 .checklist {
   list-style: none;
   padding: 0;
@@ -490,9 +467,6 @@ body {
   top: -6px;
 }
 
-/* =========================================
-   PAINEL DE EXERCÍCIOS
-   ========================================= */
 .exercise-dashboard {
   display: grid;
   grid-template-columns: 260px 1fr;
@@ -530,9 +504,6 @@ body {
 .dash-meta-grid strong { color: var(--primary); margin-bottom: 0.2rem; }
 .dash-meta-care strong { color: #b91c1c; }
 
-/* =========================================
-   PAUSA ATIVA E TIMER
-   ========================================= */
 .section-break { background: linear-gradient(135deg, var(--primary) 0%, #0d281e 100%); color: #fff; }
 .break-wrapper { max-width: 900px; margin: 0 auto; }
 .break-header { text-align: center; margin-bottom: 2.5rem; }
@@ -560,9 +531,6 @@ body {
 }
 .check-row input[type="checkbox"] { margin-top: 0.25rem; accent-color: var(--accent); }
 
-/* =========================================
-   SEGURANÇA (EPIS E CARGAS)
-   ========================================= */
 .protocol-lead {
   font-size: 0.95rem;
   color: var(--text-muted);
@@ -584,9 +552,6 @@ body {
 .phase-step strong { display: block; color: var(--primary); margin-bottom: 0.25rem; font-size: 0.95rem; }
 .phase-step p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
 
-/* =========================================
-   RODAPÉ (FOOTER)
-   ========================================= */
 .footer {
   background-color: var(--primary);
   color: #fff;
@@ -618,9 +583,6 @@ body {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* =========================================
-   MEDIA QUERIES (RESPONSIVIDADE)
-   ========================================= */
 @media (max-width: 900px) {
   .hero-grid, 
   .feature-panel, 
