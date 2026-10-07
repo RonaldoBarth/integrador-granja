@@ -6,11 +6,11 @@
   <title>Saúde Ocupacional</title>
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com"></script>
   <link rel="stylesheet" href="style.css" />
 
   <script type="module" src="script.js"></script>
@@ -71,7 +71,7 @@
           <span class="section-tag-light">Fundamentação Técnica</span>
           <h2>O que é Ergonomia?</h2>
           <p>A ergonomia busca tornar o trabalho mais seguro, confortável e adequado às necessidades do trabalhador.</p>
-          <p>Por meio de cuidados com a postura, movimentos, organização das atividades, pausas e uso correto dos equipamentos, é possível reduzir sobrecargas, prevenir dores e contribuir para mais saúde e qualidade de vida durante a jornada de trabalho.</p>
+          <p>Por meio de cuidados com a postura, movimentos, organization das atividades, pausas e uso correto dos equipamentos, é possível reduzir sobrecargas, prevenir dores e contribuir para mais saúde e qualidade de vida durante a jornada de trabalho.</p>
           <div class="highlight-quote">
             <strong>Cuidar do movimento hoje é transformar a saúde de amanhã.</strong>
           </div>
@@ -185,5 +185,38 @@
       </div>
     </div>
   </section>
-  </body> 
-</html>
+
+  <!-- ==========================================================================
+       SEÇÕES ADICIONADAS PARA CONECTAR AO SEU SCRIPT JAVASCRIPT
+       ========================================================================== -->
+
+  <!-- PAINEL DE EXERCÍCIOS (Gerenciado pela sua função initDashboard) -->
+  <section id="exercicios" class="section section-alt">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Prevenção de Lesões</span>
+        <h2>Painel de Exercícios e Alongamentos</h2>
+        <p>Selecione uma categoria abaixo para conferir as técnicas de descompressão muscular.</p>
+      </div>
+      
+      <!-- Botões que acionam a filtragem no seu JS (.dash-btn) -->
+      <div style="display: flex; gap: 0.5rem; justify-content: center; margin-bottom: 2rem;">
+        <button class="dash-btn active" data-filter="costas">Coluna & Costas</button>
+        <button class="dash-btn" data-filter="ombros">Ombros & Peitoral</button>
+        <button class="dash-btn" data-filter="pernas">Membros Inferiores</button>
+      </div>
+
+      <!-- Contêiner alvo onde seu JS injeta a lista de exercícios (#dash-content) -->
+      <div id="dash-content"></div>
+    </div>
+  </section>
+
+  <!-- CRONÔMETRO DA PAUSA ATIVA (Gerenciado pela sua função initTimer) -->
+  <section id="pausa-ativa" class="section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Pausa de Recuperação</span>
+        <h2>Cronômetro de Pausa Ativa</h2>
+        <p>Faça uma parada curta durante a jornada para executar os alongamentos recomendados.</p>
+      </div>
+
