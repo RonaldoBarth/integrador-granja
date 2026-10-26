@@ -51,16 +51,22 @@ export const hotspotData = [
   {
     title: '1. Postura ao Pegar Cargas e Animais',
     desc: 'Durante o manejo, aproxime-se da carga ou do animal. Flexione os joelhos, mantenha os pés firmes e levante de forma controlada, utilizando principalmente a força das pernas.',
-    tip: 'Orientação: Mantenha a carga próxima ao corpo e evite girar o tronco enquanto segura peso.'
+    tip: 'Orientação: Mantenha a carga próxima ao corpo e evite girar o tronco enquanto segura peso.',
+    img: 'img/peso.jpg',
+    alt: 'Imagem de como executar atividade envolvendo erguer peso'
   },
   {
     title: '2. Arraçoamento da Matriz',
     desc: 'O transporte e o abastecimento de comedouros geram sobrecarga nos ombros. Mantenha os baldes próximos ao corpo e use carrinhos auxiliares.',
-    tip: 'Orientação: Nunca gire o tronco enquanto sustenta o balde de ração elevado.'
+    tip: 'Orientação: Nunca gire o tronco enquanto sustenta o balde de ração elevado.',
+    img: 'img/racao.jpg',
+    alt: 'Imagem de como transportar e abastecer baias de racao em granja de porcos'
   },
   {
     title: '3. Limpeza das Baias',
     desc: 'A lavagem submete punhos e antebraços a vibrações contínuas. Mantenha a lança da lavadora empunhada com ambas as mãos na altura da cintura.',
-    tip: 'Orientação: Realize micro-pausas de 20 segundos a cada baia limpa para relaxar os tendões.'
+    tip: 'Orientação: Realize micro-pausas de 20 segundos a cada baia limpa para relaxar os tendões.',
+    img: 'img/limpeza.jpg',
+    alt: 'Imagem de como limpar baia de granja de porcos da forma correta evitando lesoes'
   }
 ];

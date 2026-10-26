@@ -338,7 +338,14 @@ body {
   overflow: hidden; box-shadow: var(--shadow-md); border: 2px solid var(--border-green);
 }
 
-.hotspot-img { width: 100%; object-fit: cover; }
+.hotspot-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;   /* evita o bloco "pular" de tamanho entre imagens */
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.2s ease;
+}
+.hotspot-img.fade-out { opacity: 0; }
 
 .hotspot-pin {
   position: absolute; width: 32px; height: 32px;

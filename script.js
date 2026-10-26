@@ -3,6 +3,7 @@
 function initDashboard() {
   const contentArea = document.getElementById('dash-content');
   const buttons = document.querySelectorAll('.dash-btn');
+  
 
   function renderExercises(cat) {
     if (!contentArea) return;
@@ -91,30 +92,34 @@ function initHotspots() {
   const titleEl = document.getElementById('hotspot-title');
   const descEl = document.getElementById('hotspot-desc');
   const tipEl = document.getElementById('hotspot-tip');
-  
+  const imgEl = document.getElementById('hotspot-img');
+
   const allButtons = [
     ...document.querySelectorAll('.btn-hotspot'),
     ...document.querySelectorAll('.hotspot-pin')
   ];
 
-  // Adiciona a verificação caso os dados não existam para evitar erros no console
   if (!hotspotData) {
-      console.error("Dados de Hotspot não encontrados. Verifique a exportação em dados.js");
-      return; 
+    console.error("Dados de Hotspot não encontrados. Verifique a exportação em dados.js");
+    return;
   }
 
   allButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       allButtons.forEach(b => b.classList.remove('active'));
-      
+
       const pointId = btn.getAttribute('data-point');
       const data = hotspotData[pointId];
 
       if (data) {
-          document.querySelectorAll(`[data-point="${pointId}"]`).forEach(b => b.classList.add('active'));
-          if (titleEl) titleEl.textContent = data.title;
-          if (descEl) descEl.textContent = data.desc;
-          if (tipEl) tipEl.textContent = data.tip;
+        document.querySelectorAll(`[data-point="${pointId}"]`).forEach(b => b.classList.add('active'));
+        if (titleEl) titleEl.textContent = data.title;
+        if (descEl) descEl.textContent = data.desc;
+        if (tipEl) tipEl.textContent = data.tip;
+        if (imgEl && data.img) {
+            imgEl.src = data.img;
+            imgEl.alt = data.alt || data.title;
+        }
       }
     });
   });
