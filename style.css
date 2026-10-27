@@ -271,7 +271,7 @@ body {
   text-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
 
-.hero-description { color: #e5e7eb; font-size: 1.05rem; margin-bottom: 2rem; }
+.hero-description { color: #e5e7eb; font-size: 1.05rem; margin-bottom: 2rem; max-width: 600px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; }
 
 .hero-visual-card {
@@ -586,8 +586,8 @@ body {
 
 @media (max-width: 900px) {
   .mobile-menu-btn { display: block; }
-  .hero-grid, 
-  .feature-panel, 
+  .hero-grid,    
+  .feature-panel,
   .model-3d-layout,
   .exercise-dashboard {
     grid-template-columns: 1fr;
