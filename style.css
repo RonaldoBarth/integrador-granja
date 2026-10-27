@@ -1,7 +1,16 @@
+.mobile-menu-btn {
+  display: none;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  color: var(--primary);
+  cursor: pointer;
+}
+
 :root {
   /* Cores Principais */
   --primary: #12372a;
-  --primary-light: #2d6a4f;
+  --primary-light: #f79604;
   --accent: #40916c;
   
   /* Cores Secundárias (Mint) */
@@ -17,7 +26,7 @@
   /* Bordas e Sombras */
   --border: #e5e7eb;
   --border-green: #bbf7d0;
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.01);
   --shadow-md: 0 6px 16px rgba(18, 55, 42, 0.08);
   --shadow-lg: 0 16px 32px rgba(18, 55, 42, 0.14);
   
@@ -69,11 +78,11 @@ body {
 .navbar {
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(12px);
-  position: sticky;
+  position:sticky;
   top: 0;
   z-index: 100;
   border-bottom: 2px solid var(--border-green);
-  padding: 0.85rem 0;
+  padding: 0.90rem 0;
   box-shadow: var(--shadow-sm);
 }
 
@@ -104,7 +113,7 @@ body {
 
 .nav-menu {
   display: flex;
-  gap: 1.4rem;
+  gap: 2rem;
 }
 
 .nav-menu a {
@@ -117,7 +126,7 @@ body {
 }
 
 .nav-menu a:hover {
-  color: var(--primary-light);
+  color: var(--primary);
 }
 
 .btn {
@@ -135,8 +144,8 @@ body {
 }
 
 .btn-sm {
-  padding: 0.45rem 0.95rem;
-  font-size: 0.82rem;
+  padding: 0.45rem 0.80rem;
+  font-size: 0.90rem;
 }
 
 .btn-primary {
@@ -145,8 +154,9 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: var(--primary);
+  background-color: transparent;
   box-shadow: var(--shadow-sm);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .btn-outline-light {
@@ -190,18 +200,6 @@ body {
   margin-bottom: 1.25rem;
 }
 
-.section-tag, .section-tag-light {
-  display: inline-block;
-  font-size: 0.78rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.4rem;
-}
-
-.section-tag { color: var(--accent); }
-.section-tag-light { color: var(--mint); }
-
 .section { padding: 4.5rem 0; }
 .section-alt { background-color: #ffffff; border-top: 1px solid var(--border-green); border-bottom: 1px solid var(--border-green); }
 .section-nature { background-color: rgba(255, 255, 255, 0.6); backdrop-filter: blur(5px); border-top: 1px solid var(--border-green); border-bottom: 1px solid var(--border-green); }
@@ -235,7 +233,7 @@ body {
 }
 
 .hero {
-  padding: 8rem 0;
+  padding: 5rem 0;
   background-color: var(--primary);
   background-image: 
     linear-gradient(to right, rgba(18, 55, 42, 0.98) 0%, rgba(18, 55, 42, 0.75) 55%, rgba(18, 55, 42, 0.1) 100%),
@@ -260,7 +258,6 @@ body {
   color: #ffffff;
   line-height: 1.15;
   margin-bottom: 0.8rem;
-  text-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
 .hero-quote {
@@ -274,7 +271,7 @@ body {
   text-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
 
-.hero-description { color: #e5e7eb; font-size: 1.05rem; margin-bottom: 2rem; }
+.hero-description { color: #e5e7eb; font-size: 1.05rem; margin-bottom: 2rem; max-width: 600px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; }
 
 .hero-visual-card {
@@ -291,7 +288,7 @@ body {
 .image-overlay {
   position: absolute;
   bottom: 0; left: 0; width: 100%;
-  background: linear-gradient(180deg, transparent 0%, rgba(18, 55, 42, 0.95) 85%);
+  background: linear-gradient(180deg, transparent 0%, rgba(26, 25, 24, 0.95) 85%);
   color: #fff; padding: 1.5rem;
 }
 
@@ -304,21 +301,22 @@ body {
 
 .feature-panel {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  background-color: #103E36;
   color: #fff;
-  border-radius: var(--radius-lg);
-  padding: 3rem;
+  padding: 4rem;
+  border-radius: 16px;
   box-shadow: var(--shadow-lg);
+  border: 1px solid rgda(255, 255, 255, 0.2);
 }
 
-.feature-text h2 { font-family: var(--font-display); font-size: 2rem; margin-bottom: 1rem; }
-.feature-text p { opacity: 0.9; font-size: 0.98rem; margin-bottom: 1rem; }
+.feature-text h2 { font-family: var(--font-display); font-size: 2rem; margin-bottom: 3rem; }
+.feature-text p { opacity: 0.9; font-size: 0.98rem; margin-bottom: 0.98rem; }
 .highlight-quote {
   margin-top: 1.5rem; background: rgba(255,255,255,0.1);
   padding: 0.85rem 1.2rem; border-radius: var(--radius-sm);
-  border-left: 3px solid var(--mint); font-size: 0.95rem;
+  border-left: 3px solid var(--mint); font-size: 0.98rem;
 }
 
 .feature-cards { display: flex; flex-direction: column; gap: 1rem; justify-content: center; }
@@ -340,10 +338,9 @@ body {
 
 .hotspot-img {
   width: 100%;
-  aspect-ratio: 16 / 9;   /* evita o bloco "pular" de tamanho entre imagens */
+  aspect-ratio: 16 / 9; 
   object-fit: cover;
   display: block;
-  transition: opacity 0.2s ease;
 }
 .hotspot-img.fade-out { opacity: 0; }
 
@@ -380,7 +377,6 @@ body {
   border-radius: var(--radius-lg); padding: 2.5rem; box-shadow: var(--shadow-sm);
 }
 
-.panel-tag { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--accent); margin-bottom: 0.35rem; }
 .model-info-panel h3 { font-family: var(--font-display); font-size: 1.35rem; color: var(--primary); margin-bottom: 0.75rem; }
 .model-info-panel p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.25rem; }
 
@@ -542,8 +538,6 @@ body {
   font-size: 0.95rem;
   color: var(--text-muted);
   margin-bottom: 1.5rem;
-  font-style: italic;
-  border-left: 3px solid var(--border-green);
   padding-left: 1rem;
 }
 
@@ -591,15 +585,31 @@ body {
 }
 
 @media (max-width: 900px) {
-  .hero-grid, 
-  .feature-panel, 
+  .mobile-menu-btn { display: block; }
+  .hero-grid,    
+  .feature-panel,
   .model-3d-layout,
   .exercise-dashboard {
     grid-template-columns: 1fr;
   }
 
   .nav-menu { display: none; }
-  .hero h1 { font-size: 2.4rem; }
+  .nav-menu.active {
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 2rem 0;
+    gap: 1.5rem;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    border-top: 1px solid var(--primary);
+  }
+  .hero h1 { font-size: 2.5rem; }
   
   .timer-module {
     flex: 1 1 100%; border-right: none;
