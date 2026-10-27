@@ -1,7 +1,7 @@
 :root {
   /* Cores Principais */
   --primary: #12372a;
-  --primary-light: #2d6a4f;
+  --primary-light: #f79604;
   --accent: #40916c;
   
   /* Cores Secundárias (Mint) */
@@ -69,11 +69,11 @@ body {
 .navbar {
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(12px);
-  position: sticky;
+  position:sticky;
   top: 0;
   z-index: 100;
   border-bottom: 2px solid var(--border-green);
-  padding: 0.85rem 0;
+  padding: 0.90rem 0;
   box-shadow: var(--shadow-sm);
 }
 
@@ -135,8 +135,8 @@ body {
 }
 
 .btn-sm {
-  padding: 0.45rem 0.95rem;
-  font-size: 0.82rem;
+  padding: 0.45rem 0.80rem;
+  font-size: 0.90rem;
 }
 
 .btn-primary {
@@ -235,7 +235,7 @@ body {
 }
 
 .hero {
-  padding: 8rem 0;
+  padding: 5rem 0;
   background-color: var(--primary);
   background-image: 
     linear-gradient(to right, rgba(18, 55, 42, 0.98) 0%, rgba(18, 55, 42, 0.75) 55%, rgba(18, 55, 42, 0.1) 100%),
@@ -303,22 +303,27 @@ body {
 }
 
 .feature-panel {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-  color: #fff;
-  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, #103E36 1%, #103E36 100%);
+  color: #fff;  
   padding: 3rem;
   box-shadow: var(--shadow-lg);
 }
 
-.feature-text h2 { font-family: var(--font-display); font-size: 2rem; margin-bottom: 1rem; }
-.feature-text p { opacity: 0.9; font-size: 0.98rem; margin-bottom: 1rem; }
+.container2 {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto; 
+  background-color: #103E36;
+}
+
+.feature-text h2 { font-family: var(--font-display); font-size: 2rem; margin-bottom: 3rem; }
+.feature-text p { opacity: 0.9; font-size: 0.98rem; margin-bottom: 0.98rem; }
 .highlight-quote {
   margin-top: 1.5rem; background: rgba(255,255,255,0.1);
   padding: 0.85rem 1.2rem; border-radius: var(--radius-sm);
-  border-left: 3px solid var(--mint); font-size: 0.95rem;
+  border-left: 3px solid var(--mint); font-size: 0.98rem;
 }
 
 .feature-cards { display: flex; flex-direction: column; gap: 1rem; justify-content: center; }
@@ -340,10 +345,9 @@ body {
 
 .hotspot-img {
   width: 100%;
-  aspect-ratio: 16 / 9;   /* evita o bloco "pular" de tamanho entre imagens */
+  aspect-ratio: 16 / 9; 
   object-fit: cover;
   display: block;
-  transition: opacity 0.2s ease;
 }
 .hotspot-img.fade-out { opacity: 0; }
 
@@ -542,8 +546,6 @@ body {
   font-size: 0.95rem;
   color: var(--text-muted);
   margin-bottom: 1.5rem;
-  font-style: italic;
-  border-left: 3px solid var(--border-green);
   padding-left: 1rem;
 }
 
