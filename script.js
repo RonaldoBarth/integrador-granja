@@ -131,3 +131,17 @@ window.onload = function() {
   try { initTimer(); } catch(e){}
   try { initHotspots(); } catch(e){}
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+const menuBtn = document.querySelector('.mobile-menu-btn');
+const navMenu = document.querySelector('.nav-menu');
+
+if (menuBtn && navMenu) {
+  menuBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+  
+} else {
+  console.error("Botão de menu ou menu de navegação não encontrado.");
+}
+});
