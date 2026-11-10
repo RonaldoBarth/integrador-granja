@@ -285,6 +285,7 @@ body {
   text-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
 
+<<<<<<< HEAD
 .hero-description { 
   color: #e5e7eb; 
   font-size: 1.05rem; 
@@ -295,6 +296,10 @@ body {
   flex-wrap: wrap; 
   gap: 0.85rem; 
 }
+=======
+.hero-description { color: #e5e7eb; font-size: 1.05rem; margin-bottom: 2rem; max-width: 600px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+>>>>>>> 1a7a8846338794a165ab78fda67602bcd9b2b0b5
 
 .hero-visual-card {
   border-radius: var(--radius-lg);
@@ -608,8 +613,8 @@ body {
 
 @media (max-width: 900px) {
   .mobile-menu-btn { display: block; }
-  .hero-grid, 
-  .feature-panel, 
+  .hero-grid,    
+  .feature-panel,
   .model-3d-layout,
   .exercise-dashboard {
     grid-template-columns: 1fr;
